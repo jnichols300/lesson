@@ -27,17 +27,12 @@ the styles of our website/app from the content and behavior:
 - JS
   - Behavior 
 
-## In-line vs head vs stylesheets(30m)
+## In-line vs head vs stylesheets
 > Not a codealong let class know they're welcome to but may be better just to pay attention to the first hour instead of typing everything out. All notes available in lesson plan
 
 At the crux of it all, the primary concept of CSS is to select an HTML element and then do something to it. IE. I want to take the body element, and I want to apply a background color to it.
 
-Let's get started by creating a new html webpage that we'll call `index.html` in `~/wdi/sandbox/css/`:
-
-```bash
-$ touch index.html
-```
-
+Let's get started by creating a new html webpage that we'll call `index.html`
 Let's throw some dummy content into HTML inside our `index.html`:
 
 ```html
@@ -82,7 +77,7 @@ p{
 
 That seems like a lot more work. And you might be right initially. But we're talking about 1 `<p>` right now. What if we're talking about 100 `<p>`'s and now those elements were spread across multiple web pages. Now all of a sudden this last method is less work.
 
-## CSS Selectors(10m)
+## CSS Selectors
 As you can see, there's more than one place to target elements. There's also multiple WAYS you can target elements. Let's throw some additional content in `index.html`:
 
 ```html
@@ -123,7 +118,7 @@ Finally to select an element with an id you use `#`. I'm going to change the bac
 
 *whiteboard common selectors as well as let them know about references at the bottom of the page*
 
-## CSS Specificity (20m)
+## CSS Specificity
 If I change the css selector from `p.red` back to `.red` you'll notice that the paragraph element with the id of green is still green. This is because of CSS Specificity. While CSS cascades from top to bottom. The CSS that is applied depends on Specificity as well. Take the following example:
 
 ```css
@@ -154,10 +149,8 @@ The following list of selector types is by increasing specificity:
 You can read more about CSS specificity [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 You can access a CSS specificty calculator [here](http://specificity.keegan.st)
 
-## The Box Model!(15m)
+## The Box Model
 > One of the tricky things about CSS at first is the Box Model. But it's actually really simple. Let's break it down.
-
-![](https://dl.dropboxusercontent.com/s/capg35hblhr6o7v/Screenshot%202015-10-13%2014.11.39.png?dl=0)
 
 Any HTML element can be considered a box, and so the box model applies to all HTML elements. If you select an element prescribe it a height and width, the content itself will be that height and width.
 
@@ -222,33 +215,20 @@ https://css-tricks.com
 
 # HTML, CSS and Javascript (20min)
 HTML (content), CSS (style) and Javascript (behavior) as the main components of front-end web development.
-- Q: Sum up the roles HTML and CSS play on a website in a couple of sentences.
   - HTML: Structure
   - CSS: Styling
   - JS: ???
 
-Exercise result categories
-- Interactivity
-  - Click something, something happens.
-    - Like: increment Like counter.
-    - Comment: submit comment, appended to post.
   - Javascript defines what happens on a page depending on how you interact with it.
-- No Refreshes / User Experience
   - When I comment on a post, Facebook is able to process my new comment and render it on the page without refreshing the entire page.
   - Gives the page a much smoother user experience compared to a static page that doesn't have this sort of functionality.
-- Communication with a server
   - Javascript is somehow telling a server that (a) a user has done something, (b) save that interaction and (c) display the results of that interaction to all other users.
-- Not an exhaustive list of Javascript properties, but we'll go over these and more in more detail later on in the course.
 
 So, to the main three components of front-end web development up in one word each...
 - HTML: Structure
 - CSS: Styling
 - Javascript: Behavior
- 
- ## Next, open the site in Chrome, and open the Dev Tools
 
-- Command + Option + I
-- The "Console" is a REPL
   - “Read-Eval-Print Loop”.
   - Programming environment that lets us run Javascript code one line at a time.
   - What does it do?
@@ -274,8 +254,6 @@ There are five primitive data types.
   5. Null
 
 We store data types in variables. A variable is a "bucket" that holds data. You can pass the bucket around, empty it, refill it, etc.
-
-- Format: `var NAME = DATA;`
 
   ```javascript
   // For example...
@@ -422,10 +400,6 @@ var nothing = undefined;
 
 Null: an explicitly-assigned non-value.
   - Javascript will never set anything to `null` by itself. `null` only appears when you tell it to.
-  - If I'm not mistaken, the only thing that's inherently `null` in Javascript is `null` itself!
-  - Can you imagine a situation where that would be useful?
-    - Placeholder for a variable that you know will be replaced with an actual value later on.
-
 
 So the main difference between `undefined` and `null` is intention. Other than that, they're both...nothing.
 
@@ -535,8 +509,26 @@ String methods
   ```
   
   # JS: Pega and JS
+  
+  # ClientCache API
+  
+  # find(propRefOrHandle)	
+  Finds and returns an instance of tracked Clipboard entity (a Client Cache entity, either of ClientCacheProperty / ClientCachePage / ClientCacheList) if you pass its fully qualified property reference / ins key
+  
+  # createPage(pageName)	
+  Creates a top level page with the supplied name and sets it's value as the passed object. If no object is passed then a blank object is created. If the page already exists, it will be overwritten by new empty page.
+  
+  # getName()	
+  Returns name of the property / page / list
+  
+  # getValue()	
+  Gets the value of the property
+  
+  
+  
  
  # Example:
+ 
 ```javascript
  EnubeCB.Who_VLDN = function() {
    var isDKRefVisible = EnubeCB.getIsDKRefVisible();
