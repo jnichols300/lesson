@@ -510,24 +510,24 @@ String methods
   
   # JS: Pega and JS
   
-  # ClientCache API
+  ## ClientCache API
   
-  # find(propRefOrHandle)	
+  ## find(propRefOrHandle)	
   Finds and returns an instance of tracked Clipboard entity (a Client Cache entity, either of ClientCacheProperty / ClientCachePage / ClientCacheList) if you pass its fully qualified property reference / ins key
   
-  # createPage(pageName)	
+  ## createPage(pageName)	
   Creates a top level page with the supplied name and sets it's value as the passed object. If no object is passed then a blank object is created. If the page already exists, it will be overwritten by new empty page.
   
-  # getName()	
+  ## getName()	
   Returns name of the property / page / list
   
-  # getValue()	
+  ## getValue()	
   Gets the value of the property
   
   
   
  
- # Example:
+ ## Example:
  
 ```javascript
  EnubeCB.Who_VLDN = function() {
